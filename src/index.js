@@ -1,7 +1,13 @@
-import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-import { DB_NAME } from "./constants";
 
+import connectDB from "./db/index.js";
+connectDB()
+dotenv.config({
+   path: `./env`
+}
+)
+/*
 import express from "express"
 const app = express()
 
@@ -20,3 +26,4 @@ const app = express()
      }
 
 })()
+     */
